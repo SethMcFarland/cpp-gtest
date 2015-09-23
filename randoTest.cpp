@@ -28,3 +28,36 @@ TEST(RandoTest, allChildrenSmile)
 	Rando rando;
 	ASSERT_TRUE( rando.shouldWorry(true,true,true) );
 }
+
+TEST(RandoTest, divisibility)
+{
+	Rando rando;
+	ASSERT_TRUE( rando.isDivisbleBy(50,25) );
+}
+
+TEST(RandoTest, divisibility2)
+{
+	Rando rando;
+	ASSERT_TRUE( rando.isDivisbleBy(25, 50) );
+}
+
+TEST(RandoTest, divisibility3)
+{
+	Rando rando;
+	ASSERT_FALSE( rando.isDivisbleBy(3, 10) );
+}
+
+TEST(RandoTest, divisibility4)
+{
+	Rando rando;
+	ASSERT_TRUE( rando.isDivisbleBy(0, 1) );
+}
+
+TEST(RandoTest, divisibility5)
+{
+	Rando rando;
+	ASSERT_TRUE( rando.isDivisbleBy(1, 1) );
+}
+
+
+
